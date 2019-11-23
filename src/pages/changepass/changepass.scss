@@ -1,0 +1,28 @@
+.ios,
+.md {
+    page-changepass {
+        ion-content {
+            background-image: url('assets/bg-bleu.png');
+        }
+        .item {
+            margin-bottom: 10px;
+            border: solid 1px;
+            border-color: cadetblue;
+            border-radius: 25px;
+        }
+        .close-btn {
+            /*position: absolute;
+			 top: 20px;
+			right: 2%;
+			width: 40px; */
+            text-align: right;
+            font-size: 40px;
+        }
+        .btn {
+            position: absolute;
+            right: 30%;
+            top: 80%;
+            text-align: center;
+        }
+    }
+}

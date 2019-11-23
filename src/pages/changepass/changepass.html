@@ -1,0 +1,46 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color=primary>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Change Password</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+            <ion-list>
+                <form (submit)="onSubmit()">
+                    <ion-item>
+                        <ion-input name="usr.oldpass" [(ngModel)]="usr.oldpass" type="password" placeholder="Old password"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input name="usr.newpass" [(ngModel)]="usr.newpass" type="password" placeholder="New password"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input name="usr.confirmpass" [(ngModel)]="usr.confirmpass" type="password" placeholder="Confirm password"></ion-input>
+                    </ion-item>
+                    <br>
+                    <button ion-button block type="submit">
+						<ion-icon name=""></ion-icon>
+						&nbsp; Save</button>
+                </form>
+            </ion-list>
+            <ion-row>
+                <ion-col>
+                        <h3>Instructions</h3>
+                            <ol>
+                                <li>Your password must contain at least 8 characters </li>
+                                <li>New password and old password must be different</li>
+                                <li>Your password must contain uppercase, lowercase letters and numbers</li>
+                                <li>Your password must be changed every 2 months</li>
+                            </ol>
+                </ion-col>
+            </ion-row>
+</ion-content>

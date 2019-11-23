@@ -1,0 +1,163 @@
+<ion-header>
+    <ion-navbar color=primary>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Dashboard</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="head-div">
+        <div style="text-align: center;">
+            <span class="solde">Esse mes</span> 
+        </div>
+        <ion-row>
+            <ion-col col-4>
+                <table>
+                    <tr>
+                        <td class="tab-icon">
+                            <h4 class="entete">{{trans.mensual.open}}</h4>
+                        </td>
+                        <td>
+                            <p class="entete"><i>Open<br/> Activities</i></p>
+                        </td>
+                    </tr>
+                </table>
+            </ion-col>
+            <ion-col col-4>
+                <table>
+                    <tr>
+                        <td class="tab-icon">
+                            <h4 class="entete">{{trans.mensual.close}}</h4>                                
+                        </td>
+                        <td>
+                            <p class="entete"><i>Close<br/> Activities</i></p>
+                        </td>
+                    </tr>
+                </table>
+            </ion-col>
+            <ion-col col-4>
+                <table>
+                    <tr>
+                        <td class="tab-icon">
+                            <h4 class="entete">{{trans.mensual.late}}</h4>                                
+                        </td>
+                        <td>
+                            <p class="entete"><i>Late <br/>activities</i></p>
+                        </td>
+                    </tr>
+                </table>
+            </ion-col>
+        </ion-row>
+        <div style="text-align: center;">
+            <span class="solde">This Season</span>
+       </div>
+       <ion-row>
+           <ion-col col-4>
+               <table>
+                   <tr>
+                       <td class="tab-icon">
+                           <h4 class="entete">{{trans.annual.open}}</h4>
+                       </td>
+                       <td>
+                           <p class="entete"><i>Open<br/> Activities</i></p>
+                       </td>
+                   </tr>
+               </table>
+           </ion-col>
+           <ion-col col-4>
+               <table>
+                   <tr>
+                       <td class="tab-icon">
+                           <h4 class="entete">{{trans.annual.close}}</h4>                                
+                       </td>
+                       <td>
+                           <p class="entete"><i>Close<br/> Activities</i></p>
+                       </td>
+                   </tr>
+               </table>
+           </ion-col>
+           <ion-col col-4>
+               <table>
+                   <tr>
+                       <td class="tab-icon">
+                           <h4 class="entete">{{trans.annual.late}}</h4>                                
+                       </td>
+                       <td>
+                           <p class="entete"><i>Late <br/>activities</i></p>
+                       </td>
+                   </tr>
+               </table>
+           </ion-col>
+       </ion-row>
+       <div style="text-align: center;">
+        <span class="solde">Global</span>
+        </div>
+   <ion-row>
+       <ion-col col-4>
+           <table>
+               <tr>
+                   <td class="tab-icon">
+                       <h4 class="entete">{{trans.global.open}}</h4>
+                   </td>
+                   <td>
+                       <p class="entete"><i>Open<br/> Activities</i></p>
+                   </td>
+               </tr>
+           </table>
+       </ion-col>
+       <ion-col col-4>
+           <table>
+               <tr>
+                   <td class="tab-icon">
+                       <h4 class="entete">{{trans.global.close}}</h4>                                
+                   </td>
+                   <td>
+                       <p class="entete"><i>Close<br/> Activities</i></p>
+                   </td>
+               </tr>
+           </table>
+       </ion-col>
+       <ion-col col-4>
+           <table>
+               <tr>
+                   <td class="tab-icon">
+                       <h4 class="entete">{{trans.global.late}}</h4>                                
+                   </td>
+                   <td>
+                       <p class="entete"><i>Late <br/>activities</i></p>
+                   </td>
+               </tr>
+           </table>
+       </ion-col>
+   </ion-row>
+    </div>
+    <ion-card>
+      <ion-card-header text-wrap>
+        Distribution of late activities by user (this month)
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+        <ion-card-header text-wrap>
+          Distribution of late activities by user (this season)
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #doughnutCanvas1></canvas>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+      <ion-card-header text-wrap>
+        Late activities of the season
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+    
+</ion-content>

@@ -10,7 +10,7 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title>Change Password</ion-title>
+        <ion-title>Alterar Senha</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -18,28 +18,28 @@
             <ion-list>
                 <form (submit)="onSubmit()">
                     <ion-item>
-                        <ion-input name="usr.oldpass" [(ngModel)]="usr.oldpass" type="password" placeholder="Old password"></ion-input>
+                        <ion-input name="usr.oldpass" [(ngModel)]="usr.oldpass" type="password" placeholder="Senha Antiga"></ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-input name="usr.newpass" [(ngModel)]="usr.newpass" type="password" placeholder="New password"></ion-input>
+                        <ion-input name="usr.newpass" [(ngModel)]="usr.newpass" type="password" placeholder="Nova Senha"></ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-input name="usr.confirmpass" [(ngModel)]="usr.confirmpass" type="password" placeholder="Confirm password"></ion-input>
+                        <ion-input name="usr.confirmpass" [(ngModel)]="usr.confirmpass" type="password" placeholder="Confirmar Senha"></ion-input>
                     </ion-item>
                     <br>
                     <button ion-button block type="submit">
 						<ion-icon name=""></ion-icon>
-						&nbsp; Save</button>
+						&nbsp; Salva</button>
                 </form>
             </ion-list>
             <ion-row>
                 <ion-col>
-                        <h3>Instructions</h3>
+                        <h3>Intruções</h3>
                             <ol>
-                                <li>Your password must contain at least 8 characters </li>
-                                <li>New password and old password must be different</li>
-                                <li>Your password must contain uppercase, lowercase letters and numbers</li>
-                                <li>Your password must be changed every 2 months</li>
+                                <li>Sua senha deve conter mais do que 8 caracteres</li>
+                                <li>Sua senha nova deve ser diferente da senha antiga</li>
+                                <li>Sua senha deve conter letras maísculas, minusculas e números</li>
+                                <li>Sua senha deve ser trocada a cada dois meses</li>
                             </ol>
                 </ion-col>
             </ion-row>

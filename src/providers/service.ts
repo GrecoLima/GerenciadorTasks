@@ -44,7 +44,7 @@ export class Service {
     }
 
     listuser(){
-      let users= [{"id":"1","name":"Lee","firstname":"kaze","email":"kazelee@gmail.com","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-06-26 16:50:36","updated_at":"2018-06-26 18:58:33"},{"id":"2","name":"Doe","firstname":"John","email":"johndoe@gmail.com","password":"59af941686ccfcdf2642a269fed1c3fc","created_at":"2018-07-05 00:00:00","updated_at":"2018-08-16 09:47:00"},{"id":"3","name":"Ackerman","firstname":"Jane","email":"janeackerman@hotmail.com","password":"42a764d5de256dd7b52d94fd988e1785","id_droit":"3","created_at":"2018-07-05 00:00:00","updated_at":"2018-07-05 00:00:00"},{"id":"4","name":"Down","firstname":"Claude","email":"cdown@live.cm","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-07-05 00:00:00","updated_at":"2018-07-05 00:00:00"},{"0":"5","1":"Onguene","2":"Daniel","3":"donguene@kpmg.cm","4":"42a764d5de256dd7b52d94fd988e1785","5":"3","6":"2018-07-27 17:07:19","7":"2018-07-27 17:07:19","id":"5","name":"Obama","firstname":"Daniel","email":"dobama@email.cm","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-07-27 17:07:19","updated_at":"2018-07-27 17:07:19"}];
+      let users= [{"id":"1","name":"Lee","firstname":"Teiji","email":"teiji@gmail.com","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-06-26 16:50:36","updated_at":"2018-06-26 18:58:33"},{"id":"2","name":"Milani","firstname":"Greco","email":"Greco@gmail.com","password":"59af941686ccfcdf2642a269fed1c3fc","created_at":"2018-07-05 00:00:00","updated_at":"2018-08-16 09:47:00"},{"id":"3","name":"Perini","firstname":"Lais","email":"LaisPerini@hotmail.com","password":"42a764d5de256dd7b52d94fd988e1785","id_droit":"3","created_at":"2018-07-05 00:00:00","updated_at":"2018-07-05 00:00:00"},{"id":"4","name":"Lemos","firstname":"Leonardo","email":"Leronardo@live.cm","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-07-05 00:00:00","updated_at":"2018-07-05 00:00:00"},{"0":"5","1":"Musk","2":"Elon","3":"ElonMusk@spacex.us","4":"42a764d5de256dd7b52d94fd988e1785","5":"3","6":"2018-07-27 17:07:19","7":"2018-07-27 17:07:19","id":"5","name":"Cobain","firstname":"Kurt","email":"dobama@email.cm","password":"42a764d5de256dd7b52d94fd988e1785","created_at":"2018-07-27 17:07:19","updated_at":"2018-07-27 17:07:19"}];
     
       return users;
     }
@@ -67,7 +67,7 @@ export class Service {
     }
 
     dashgraph(){
-        let variable= {"annual":{"label":["kaze Lee","John Doe","Jane Ackerman","Claude Down"],"nbre":["1","1","2","2"]},"mensual":{"label":["John Doe"],"nbre":["1"]}};
+        let variable= {"annual":{"label":["Greco Milani","Lais Perini","Teiji Uekita","Leonardo Lemos"],"nbre":["1","1","2","2"]},"mensual":{"label":["Greco Milani"],"nbre":["1"]}};
 
         return variable;
     }

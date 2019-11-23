@@ -32,9 +32,9 @@ export class MyApp {
 
     this.pages = [
       { title: 'Dashboard', component: HomePage, icone: 'home' },
-      { title: 'Tasks', component: "TasksPage", icone: 'list' },
-      { title: 'Profile', component: "ProfilPage", icone: 'contact' },
-      { title: 'Change Password', component: "ChangepassPage", icone: 'lock' },
+      { title: 'Ocorrências', component: "TasksPage", icone: 'list' },
+      { title: 'Perfil', component: "ProfilPage", icone: 'contact' },
+      { title: 'Mudar Senha', component: "ChangepassPage", icone: 'lock' },
     ];
   }
 
@@ -46,8 +46,8 @@ export class MyApp {
 
   logout(){
     let confirmAlert = this.alertCtrl.create({
-        title: "Information",
-        message: "Do you really want to exit the application ?",
+        title: "Informação",
+        message: "Realmente deseja sair da aplicação ?",
         buttons: [
             {
                 text: 'No',

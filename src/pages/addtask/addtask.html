@@ -24,14 +24,14 @@
         <ion-row>
             <ion-col>
                 <ion-item>
-                    <ion-label>Type of task</ion-label>
+                    <ion-label>Tipo da Ocorrência</ion-label>
                     <ion-select [(ngModel)]="task.type" >
-                        <ion-option value="Call">Call</ion-option>
-                        <ion-option value="Meeting">Meeting</ion-option>
-                        <ion-option value="Task">Task</ion-option>
-                        <ion-option value="Deadline">Deadline</ion-option>
-                        <ion-option value="Email">Email</ion-option>
-                        <ion-option value="Lunch">Lunch</ion-option>
+                        <ion-option value="Call">Urgente</ion-option>
+                        <ion-option value="Meeting">Grave</ion-option>
+                        <ion-option value="Task">Acidente</ion-option>
+                        <ion-option value="Deadline">Acidente Natural</ion-option>
+                        <ion-option value="Email">Patrulha</ion-option>
+                        <ion-option value="Lunch">Dúvidas</ion-option>
                     </ion-select>
                 </ion-item>
             </ion-col>
@@ -40,27 +40,27 @@
         <ion-row>
             <ion-col col-6>
                 <ion-item>
-                    <ion-label>Periodicity</ion-label>
+                    <ion-label>Periodicidade</ion-label>
                     <ion-select [(ngModel)]="task.period" >
-                        <ion-option value="">No periodicity</ion-option>
-                        <ion-option value="Daily">Daily</ion-option>
-                        <ion-option value="Weekly">Weekly</ion-option>
-                        <ion-option value="Monthly">Monthly</ion-option>
-                        <ion-option value="Quarterly">Quarterly</ion-option>
-                        <ion-option value="Half-yearly">Half-yearly</ion-option>
-                        <ion-option value="Annual">Annual</ion-option>
+                        <ion-option value="">Nao periodico</ion-option>
+                        <ion-option value="Daily">Diariamente</ion-option>
+                        <ion-option value="Weekly">Semanalmente</ion-option>
+                        <ion-option value="Monthly">Mensalmente</ion-option>
+                        <ion-option value="Quarterly">Trimestral</ion-option>
+                        <ion-option value="Half-yearly">Semestral</ion-option>
+                        <ion-option value="Annual">Anual</ion-option>
                     </ion-select>
                 </ion-item>
             </ion-col>
             <ion-col col-6>
                 <ion-item>
-                    <ion-label>Reminder</ion-label>
+                    <ion-label>Lembrete</ion-label>
                     <ion-select [(ngModel)]="task.reminder">
                         <ion-option value="30">30 min</ion-option>
                         <ion-option value="45">45 min</ion-option>
-                        <ion-option value="60">1 hour</ion-option>
-                        <ion-option value="120">2 hour</ion-option>
-                        <ion-option value="180">3 hour</ion-option>
+                        <ion-option value="60">1 hora</ion-option>
+                        <ion-option value="120">2 horas</ion-option>
+                        <ion-option value="180">3 horas</ion-option>
                     </ion-select>
                 </ion-item>
             </ion-col>
@@ -68,7 +68,7 @@
         <ion-row>
             <ion-col>
                 <ion-item>
-                    <ion-label>Title:</ion-label>
+                    <ion-label>Titulo:</ion-label>
                     <ion-input type="text" [(ngModel)]="task.task"></ion-input>
                 </ion-item>
             </ion-col>
@@ -76,19 +76,19 @@
         <ion-row>
             <ion-col col-4>
                 <ion-item>
-                    <ion-label>Date:</ion-label>
+                    <ion-label>Data:</ion-label>
                     <ion-datetime [(ngModel)]="task.date_expected" max="2030-12-31" displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY"></ion-datetime>
                 </ion-item>
             </ion-col>
             <ion-col col-4>
                 <ion-item>
-                    <ion-label>Time:</ion-label>
+                    <ion-label>Tempo:</ion-label>
                     <ion-datetime [(ngModel)]="task.time" max="2030-12-31" displayFormat="HH:mm" pickerFormat="HH mm"></ion-datetime>
                 </ion-item>
             </ion-col>
             <ion-col col-4>
                 <ion-item>
-                    <ion-label>Duration:</ion-label>
+                    <ion-label>Duração:</ion-label>
                     <ion-datetime [(ngModel)]="task.duration" max="2030-12-31" displayFormat="HH:mm" pickerFormat="HH mm"></ion-datetime>
                 </ion-item>
             </ion-col>
@@ -96,7 +96,7 @@
         <ion-row>
             <ion-col>
                 <ion-item>
-                    <ion-label>Detail:</ion-label>
+                    <ion-label>Detalhe:</ion-label>
                     <ion-textarea type="text" [(ngModel)]="task.detail"></ion-textarea>
                 </ion-item>
             </ion-col>
@@ -104,13 +104,13 @@
         <ion-row>
                 <ion-col>
                     <ion-item>
-                        <ion-label>Assigned To:</ion-label>
+                        <ion-label>Atribuído para:</ion-label>
                         <ion-select [(ngModel)]="task.assigned_to">
                             <ion-option *ngFor="let usr of users" value="{{usr.id}}">{{usr.firstname}} {{usr.name}}</ion-option>
                         </ion-select>
                     </ion-item>
                 </ion-col>
             </ion-row>
-        <button ion-button round block (click)="newtask()">Save</button>
+        <button ion-button round block (click)="newtask()">Salvar</button>
     </ion-list>
 </ion-content>

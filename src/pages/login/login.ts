@@ -52,7 +52,7 @@ import { HomePage } from '../home/home';
   onSubmit(){
     if(this.user.email==="" || this.user.password===""){
         let toast = this.toastCtrl.create({
-                          message: "Please fill the form!",
+                          message: "Por favor preencha todos os campos!",
                           duration: 3000,
                           position: 'top'
                         });
@@ -60,14 +60,14 @@ import { HomePage } from '../home/home';
                         toast.present();
     }else{
       let loader = this.loading.create({
-        content: "Loading..." ,
+        content: "Carregando..." ,
       });
 
       loader.present();
       setTimeout(() => {
       loader.dismiss();
       this.navCtrl.setRoot(HomePage);
-      this.service.toastmessage("You are connected", "top");
+      this.service.toastmessage("Você esta conectado", "top");
     }, 1500);
     }
  

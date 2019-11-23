@@ -78,17 +78,17 @@ var ProfilPage = (function () {
         this.loading = loading;
         this.service = service;
         this.alert = alert;
-        this.usr = { firstname: "John", name: "DOE", email: "johndoe@gmail.com" };
+        this.usr = { firstname: "Milani", name: "Greco", email: "greco.lima.milani@ibm.com" };
     }
     ProfilPage.prototype.save = function () {
         var _this = this;
         var loader = this.loading.create({
-            content: "Loading...",
+            content: "Carregando...",
         });
         loader.present();
         setTimeout(function () {
             loader.dismiss();
-            _this.service.toastmessage("Data saved!", "middle");
+            _this.service.toastmessage("Usuário Salvo!", "middle");
         }, 1500);
     };
     ProfilPage.prototype.ionViewDidLoad = function () {
@@ -99,12 +99,12 @@ var ProfilPage = (function () {
 ProfilPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profil',template:/*ion-inline-start:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/profil/profil.html"*/'<!--\n  Generated template for the ProfilPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color=primary>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Profile</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n        <ion-item>\n            <ion-input name="user.nom" [(ngModel)]="usr.name" type="text" placeholder="Name">\n            </ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-input name="user.prenom" [(ngModel)]="usr.firstname" type="text" placeholder="Firstname">\n            </ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-input name="user.email" ng-readonly="true" [(ngModel)]="usr.email" type="email" placeholder="Email"></ion-input>\n        </ion-item>\n        <button ion-button block (click)="save()">\n            <ion-icon name=""></ion-icon>\n            &nbsp; Save</button>\n        <br>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/profil/profil.html"*/,
+        selector: 'page-profil',template:/*ion-inline-start:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/profil/profil.html"*/'<!--\n  Generated template for the ProfilPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color=primary>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Perfil</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n        <ion-item>\n            <ion-input name="user.nom" [(ngModel)]="usr.name" type="text" placeholder="Name">\n            </ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-input name="user.prenom" [(ngModel)]="usr.firstname" type="text" placeholder="Firstname">\n            </ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-input name="user.email" ng-readonly="true" [(ngModel)]="usr.email" type="email" placeholder="Email"></ion-input>\n        </ion-item>\n        <button ion-button block (click)="save()">\n            <ion-icon name=""></ion-icon>\n            &nbsp; Salvar</button>\n        <br>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/profil/profil.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_toast_toast_controller__["a" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_loading_loading_controller__["a" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_service__["a" /* Service */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_alert_alert_controller__["a" /* AlertController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_toast_toast_controller__["a" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_toast_toast_controller__["a" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_loading_loading_controller__["a" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_loading_loading_controller__["a" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_service__["a" /* Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_service__["a" /* Service */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_alert_alert_controller__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_alert_alert_controller__["a" /* AlertController */]) === "function" && _f || Object])
 ], ProfilPage);
 
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=profil.js.map
 
 /***/ })

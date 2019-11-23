@@ -48,27 +48,27 @@ if(this.usr.oldpass!==""){
           if(this.usr.newpass.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/)){
           
         let loader = this.loading.create({
-            content: "Loading..." ,
+            content: "Carregando..." ,
           });
            loader.present();
 
            setTimeout(() => {
             loader.dismiss();
-            this.service.toastmessage("Change succeed!", "middle");
+            this.service.toastmessage("Alterado com sucesso!", "middle");
             this.usr.oldpass=""; this.usr.newpass=""; this.usr.confirmpass="";
           }, 1500);                 
         
         }else{
-          this.service.toastmessage("Your password does not match the requested criteria!", "middle");
+          this.service.toastmessage("Sua senha não combina com os critérios aceitáveis!", "middle");
         }
         }else{
-          this.service.toastmessage("Your passwords must have at least 8 characters!", "middle");
+          this.service.toastmessage("Sua senha deve ter mais do que 8 caracteres!", "middle");
         }
       }else{
-        this.service.toastmessage("Your passwords must be the same!", "middle");
+        this.service.toastmessage("Sua senha deve ser igual!", "middle");
       }
     }else{
-      this.service.toastmessage("New password and old password must be different!", "middle");
+      this.service.toastmessage("A nova senha deve ser diferente da senha atual!", "middle");
     }
     }else{
       this.service.toastmessage("Please enter your confirm pass!", "middle");
@@ -77,7 +77,7 @@ if(this.usr.oldpass!==""){
     this.service.toastmessage("Please enter your new pass!", "middle");
   }
 }else{
-        this.service.toastmessage("Please enter your old pass!", "middle");
+        this.service.toastmessage("Por favor entre com sua senha antiga!", "middle");
 }
     
    }

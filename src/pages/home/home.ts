@@ -70,7 +70,7 @@ export class HomePage {
 
   dashgraph(){
       var data= this.service.infotask();
-      let label= ['October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'];
+      let label= ['Outubro', 'Novembro', 'Dezembro', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'];
       this.lineChart = new Chart(this.lineCanvas.nativeElement, {
        
                   type: 'line',
@@ -78,7 +78,7 @@ export class HomePage {
                       labels: label,
                       datasets: [
                           {
-                              label: "late activities",
+                              label: "Graves",
                               fill: false,
                               lineTension: 0.1,
                               backgroundColor: "rgba(75,192,192,0.4)",
@@ -100,7 +100,7 @@ export class HomePage {
                               spanGaps: false,
                           },
                           {
-                           label: "Cumulative late activities",
+                           label: "Ocorrências resolvidas",
                            fill: false,
                            lineTension: 0.1,
                            backgroundColor: "rgba(234, 147, 71,0.4)",

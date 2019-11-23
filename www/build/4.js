@@ -93,31 +93,31 @@ var ChangepassPage = (function () {
                             if (this.usr.newpass.length >= 8) {
                                 if (this.usr.newpass.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/)) {
                                     var loader_1 = this.loading.create({
-                                        content: "Loading...",
+                                        content: "Carregando...",
                                     });
                                     loader_1.present();
                                     setTimeout(function () {
                                         loader_1.dismiss();
-                                        _this.service.toastmessage("Change succeed!", "middle");
+                                        _this.service.toastmessage("Alterado com sucesso!", "middle");
                                         _this.usr.oldpass = "";
                                         _this.usr.newpass = "";
                                         _this.usr.confirmpass = "";
                                     }, 1500);
                                 }
                                 else {
-                                    this.service.toastmessage("Your password does not match the requested criteria!", "middle");
+                                    this.service.toastmessage("Sua senha não combina com os critérios aceitáveis!", "middle");
                                 }
                             }
                             else {
-                                this.service.toastmessage("Your passwords must have at least 8 characters!", "middle");
+                                this.service.toastmessage("Sua senha deve ter mais do que 8 caracteres!", "middle");
                             }
                         }
                         else {
-                            this.service.toastmessage("Your passwords must be the same!", "middle");
+                            this.service.toastmessage("Sua senha deve ser igual!", "middle");
                         }
                     }
                     else {
-                        this.service.toastmessage("New password and old password must be different!", "middle");
+                        this.service.toastmessage("A nova senha deve ser diferente da senha atual!", "middle");
                     }
                 }
                 else {
@@ -129,7 +129,7 @@ var ChangepassPage = (function () {
             }
         }
         else {
-            this.service.toastmessage("Please enter your old pass!", "middle");
+            this.service.toastmessage("Por favor entre com sua senha antiga!", "middle");
         }
     };
     return ChangepassPage;
@@ -137,19 +137,12 @@ var ChangepassPage = (function () {
 ChangepassPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-changepass',template:/*ion-inline-start:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/changepass/changepass.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color=primary>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Change Password</ion-title>\n    </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n            <ion-list>\n                <form (submit)="onSubmit()">\n                    <ion-item>\n                        <ion-input name="usr.oldpass" [(ngModel)]="usr.oldpass" type="password" placeholder="Old password"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-input name="usr.newpass" [(ngModel)]="usr.newpass" type="password" placeholder="New password"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-input name="usr.confirmpass" [(ngModel)]="usr.confirmpass" type="password" placeholder="Confirm password"></ion-input>\n                    </ion-item>\n                    <br>\n                    <button ion-button block type="submit">\n						<ion-icon name=""></ion-icon>\n						&nbsp; Save</button>\n                </form>\n            </ion-list>\n            <ion-row>\n                <ion-col>\n                        <h3>Instructions</h3>\n                            <ol>\n                                <li>Your password must contain at least 8 characters </li>\n                                <li>New password and old password must be different</li>\n                                <li>Your password must contain uppercase, lowercase letters and numbers</li>\n                                <li>Your password must be changed every 2 months</li>\n                            </ol>\n                </ion-col>\n            </ion-row>\n</ion-content>'/*ion-inline-end:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/changepass/changepass.html"*/,
+        selector: 'page-changepass',template:/*ion-inline-start:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/changepass/changepass.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color=primary>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Alterar Senha</ion-title>\n    </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n            <ion-list>\n                <form (submit)="onSubmit()">\n                    <ion-item>\n                        <ion-input name="usr.oldpass" [(ngModel)]="usr.oldpass" type="password" placeholder="Senha Antiga"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-input name="usr.newpass" [(ngModel)]="usr.newpass" type="password" placeholder="Nova Senha"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-input name="usr.confirmpass" [(ngModel)]="usr.confirmpass" type="password" placeholder="Confirmar Senha"></ion-input>\n                    </ion-item>\n                    <br>\n                    <button ion-button block type="submit">\n						<ion-icon name=""></ion-icon>\n						&nbsp; Salva</button>\n                </form>\n            </ion-list>\n            <ion-row>\n                <ion-col>\n                        <h3>Intruções</h3>\n                            <ol>\n                                <li>Sua senha deve conter mais do que 8 caracteres</li>\n                                <li>Sua senha nova deve ser diferente da senha antiga</li>\n                                <li>Sua senha deve conter letras maísculas, minusculas e números</li>\n                                <li>Sua senha deve ser trocada a cada dois meses</li>\n                            </ol>\n                </ion-col>\n            </ion-row>\n</ion-content>'/*ion-inline-end:"/home/grecomilani/Desktop/ProjetinhoFoda/task manager/src/pages/changepass/changepass.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_service__["a" /* Service */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__providers_service__["a" /* Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_service__["a" /* Service */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _j || Object])
 ], ChangepassPage);
 
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=changepass.js.map
 
 /***/ })

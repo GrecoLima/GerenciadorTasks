@@ -9,7 +9,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Tasks</ion-title>
+        <ion-title>Ocorrências</ion-title>
         <ion-buttons right>
             <button detail-push navPush="AddtaskPage" ion-button><ion-icon name="add-circle"></ion-icon></button>
         </ion-buttons>
@@ -28,7 +28,7 @@
     <ion-row *ngIf="isGroupShown(order)">
         <ion-col col-6>
             <ion-item>
-                <ion-label>Task State</ion-label>
+                <ion-label>Ocorrência Status</ion-label>
                 <ion-select [(ngModel)]="close" (ionChange)="liste(0)">
                     <ion-option value="">All</ion-option>
                     <ion-option value="0">Open</ion-option>
@@ -38,33 +38,33 @@
         </ion-col>
         <ion-col col-6>
             <ion-item>
-                <ion-label>Assigned to</ion-label>
+                <ion-label>Atribuído para</ion-label>
                 <ion-select [(ngModel)]="assign" (ionChange)="liste(0)">
-                    <ion-option value="">All</ion-option>
+                    <ion-option value="">Todas</ion-option>
                     <ion-option *ngFor="let usr of users" value="{{usr.id}}">{{usr.firstname}} {{usr.name}}</ion-option>
                 </ion-select>
             </ion-item>  
         </ion-col>
         <ion-col col-6>
             <ion-item>
-                <ion-label>Created by</ion-label>
+                <ion-label>Criada por</ion-label>
                 <ion-select [(ngModel)]="created" (ionChange)="liste(0)">
-                    <ion-option value="">All</ion-option>
+                    <ion-option value="">Todas</ion-option>
                     <ion-option *ngFor="let usrr of users" value="{{usrr.id}}">{{usrr.firstname}} {{usrr.name}}</ion-option>
                 </ion-select>
             </ion-item>     
         </ion-col>
         <ion-col col-6>
             <ion-item>
-                <ion-label>Type of task</ion-label>
+                <ion-label>Tipo da Ocorrência</ion-label>
                 <ion-select [(ngModel)]="type" (ionChange)="liste(0)">
                     <ion-option value="">All</ion-option>
-                    <ion-option value="Call">Call</ion-option>
-                    <ion-option value="Meeting">Meeting</ion-option>
-                    <ion-option value="Task">Task</ion-option>
-                    <ion-option value="Deadline">Deadline</ion-option>
-                    <ion-option value="Email">Email</ion-option>
-                    <ion-option value="Lunch">Lunch</ion-option>
+                    <ion-option value="Call">Urgente</ion-option>
+                    <ion-option value="Meeting">Grave</ion-option>
+                    <ion-option value="Task">Acidente</ion-option>
+                    <ion-option value="Deadline">Acidente Natural</ion-option>
+                    <ion-option value="Email">Patrulha</ion-option>
+                    <ion-option value="Lunch">Dúvidas</ion-option>
                 </ion-select>
             </ion-item>           
         </ion-col>
@@ -74,9 +74,9 @@
             <ion-item >
                 <img src="assets/Calendar.png" item-left alt="">
                 <h2>{{task.task}}</h2>
-                <p>Assigned to: {{task.assigned}}</p>
+                <p>Atribuído para: {{task.assigned}}</p>
                 <p class="type">{{task.type_activity}}</p>
-                <p class="close" *ngIf="task.close==='1'" color="danger"><i class="badge">Close</i></p>
+                <p class="close" *ngIf="task.close==='1'" color="danger"><i class="badge">Fechar</i></p>
             </ion-item>
             <ion-item-options side="right">
                 <button ion-button color="secondary" detail-push navPush="VirementPage" [navParams]=" {item:task}">
@@ -96,7 +96,7 @@
         <ion-infinite-scroll-content></ion-infinite-scroll-content>
     </ion-infinite-scroll>
     <ion-refresher (ionRefresh)="liste($event)">
-        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Carregando...">
         </ion-refresher-content>
     </ion-refresher>
 </ion-content>

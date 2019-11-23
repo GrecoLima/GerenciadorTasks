@@ -22,16 +22,16 @@ user: any;
 usr:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public loading: LoadingController,
      public service: Service, public alert: AlertController) {
-      this.usr= {firstname: "John", name: "DOE", email: "johndoe@gmail.com"};
+      this.usr= {firstname: "Milani", name: "Greco", email: "greco.lima.milani@ibm.com"};
   }
   save(){
       let loader = this.loading.create({
-        content: "Loading..." ,
+        content: "Carregando..." ,
       });
       loader.present();
       setTimeout(() => {
         loader.dismiss();
-        this.service.toastmessage("Data saved!", "middle");          
+        this.service.toastmessage("Usuário Salvo!", "middle");          
         
       }, 1500);  
     }         

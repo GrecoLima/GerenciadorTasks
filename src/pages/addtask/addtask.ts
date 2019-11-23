@@ -48,16 +48,16 @@ export class AddtaskPage {
 
   newtask(){
  if(this.task.assigned_to==="" || this.task.type==="" || this.task.task==="" || this.task.time===""|| this.task.duration===""){
-     this.service.toastmessage("Please fill the form", "middle");
+     this.service.toastmessage("Preencha todos os campos", "middle");
  }else{
           let loader = this.loading.create({
-            content: "Loading ..." ,
+            content: "Carregando ..." ,
           });
 
           loader.present();
           setTimeout(() => {
             loader.dismiss();
-            this.service.toastmessage("Successful", "middle");
+            this.service.toastmessage("Sucesso", "middle");
             this.view.dismiss();     
           }, 1000); 
           

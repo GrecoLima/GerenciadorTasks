@@ -55,7 +55,7 @@ listesuivante(infiniteScroll){
 
   liste(refresher){
     let loader = this.loading.create({
-      content: "Loading..." ,
+      content: "Carregando.." ,
     });
     loader.present();
     
@@ -71,19 +71,19 @@ listesuivante(infiniteScroll){
   deleteData(id){
     let confirmAlert = this.alert.create({
       title: "Information",
-      message: "Do you really want to delete this task?",
+      message: "Você deseja remover essa ocorrência?",
       buttons: [
           {
-              text: 'No',
+              text: 'Não',
               handler: () => {
                   return;
               }
           },
           {
-              text: 'Yes',
+              text: 'Sim',
               handler: () => {
                 let loader = this.loading.create({
-                  content: "Loading...",
+                  content: "Carregando...",
                 });
             
                 loader.present();
@@ -101,20 +101,20 @@ listesuivante(infiniteScroll){
 
   closeData(id){
     let confirmAlert = this.alert.create({
-      title: "Information",
-      message: "Do you really want to close this task?",
+      title: "Informação",
+      message: "Você deseja fechar essa ocorrência?",
       buttons: [
           {
-              text: 'No',
+              text: 'Não',
               handler: () => {
                   return;
               }
           },
           {
-              text: 'Yes',
+              text: 'Sim',
               handler: () => {
                 let loader = this.loading.create({
-                  content: "Loading...",
+                  content: "Carregando...",
                 });
             
                 loader.present();

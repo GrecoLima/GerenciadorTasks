@@ -19,7 +19,7 @@
 <ion-content>
     <ion-row class="searchzone">
         <ion-col col-11>
-            <ion-searchbar placeholder="Search"  [(ngModel)]="search" (ionInput)="liste(0)"></ion-searchbar>                    
+            <ion-searchbar placeholder="Pesquisar"  [(ngModel)]="search" (ionInput)="liste(0)"></ion-searchbar>                    
         </ion-col>
         <ion-col col-1>
                <p (click)="toggleGroup(order)"><a><ion-icon name="settings"></ion-icon></a>  </p>               
@@ -31,8 +31,8 @@
                 <ion-label>Ocorrência Status</ion-label>
                 <ion-select [(ngModel)]="close" (ionChange)="liste(0)">
                     <ion-option value="">All</ion-option>
-                    <ion-option value="0">Open</ion-option>
-                    <ion-option value="1">Close</ion-option>
+                    <ion-option value="0">Aberta</ion-option>
+                    <ion-option value="1">Fechado</ion-option>
                 </ion-select>
             </ion-item>
         </ion-col>
@@ -76,7 +76,7 @@
                 <h2>{{task.task}}</h2>
                 <p>Atribuído para: {{task.assigned}}</p>
                 <p class="type">{{task.type_activity}}</p>
-                <p class="close" *ngIf="task.close==='1'" color="danger"><i class="badge">Fechar</i></p>
+                <p class="close" *ngIf="task.close==='1'" color="danger"><i class="badge">Fechado</i></p>
             </ion-item>
             <ion-item-options side="right">
                 <button ion-button color="secondary" detail-push navPush="VirementPage" [navParams]=" {item:task}">

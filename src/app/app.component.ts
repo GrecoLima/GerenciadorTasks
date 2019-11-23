@@ -50,13 +50,13 @@ export class MyApp {
         message: "Realmente deseja sair da aplicação ?",
         buttons: [
             {
-                text: 'No',
+                text: 'Não',
                 handler: () => {
                     return;
                 }
             },
             {
-                text: 'Yes',
+                text: 'Sim',
                 handler: () => {
                   localStorage.removeItem('todoin_user');
                   this.nav.setRoot("LoginPage");

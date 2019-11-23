@@ -19,7 +19,7 @@ export class AddtaskPage {
 
   task: any;
   item:any;
-  title="New task";
+  title="Nova Ocorrência";
   user: any;
   users=[];
   action="create";

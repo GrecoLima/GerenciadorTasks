@@ -14,24 +14,24 @@
         <span class="titre">{{task.type_activity}}</span>
         <p class="close" *ngIf="task.close==='1'" color="danger"><i class="badge">Close</i></p>
         <ion-row>
-                <a ion-button round color=danger detail-push navPush="AddtaskPage" [navParams]=" {item:task}">Update Task</a>
+                <a ion-button round color=danger detail-push navPush="AddtaskPage" [navParams]=" {item:task}">Atualizar Ocorrência</a>
         </ion-row>
     </div>
     <ion-card padding>
             <ion-card-title>
-                    <h1>All informations</h1>
+                    <h1>Informações</h1>
             </ion-card-title>
-            <h3 style="color:#000"> <b>Detail</b> </h3>
+            <h3 style="color:#000"> <b>Detalhes</b> </h3>
             <h4> {{task.detail}}</h4> <br>
-            <h3 style="color:#000"> <b>Assigned to</b> </h3>
+            <h3 style="color:#000"> <b>Atribuído Para</b> </h3>
             <h4> {{task.assigned}}</h4> <br>
             <h3 style="color:#000"> <b>Date</b> </h3>
-            <h4> {{task.date_expected}} at {{task.time}} (duration: {{task.duration}}</h4> <br>
-            <h3 style="color:#000"> <b>Closed date</b> </h3>
+            <h4> {{task.date_expected}} at {{task.time}} (Duração: {{task.duration}})</h4> <br>
+            <h3 style="color:#000"> <b>Data</b> </h3>
             <h4> {{task.real_close_date}}</h4> <br>
-            <h3 style="color:#000"> <b>period</b> </h3>
+            <h3 style="color:#000"> <b>Periodo</b> </h3>
             <h4> {{task.period}}</h4> <br>
-            <h3 style="color:#000"> <b>Reminder</b> </h3>
+            <h3 style="color:#000"> <b>Lembrete</b> </h3>
             <h4> {{task.reminder}} min</h4> <br>
     </ion-card>
 
